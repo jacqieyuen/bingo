@@ -7,20 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var game_component_1 = require("./components/game/game.component");
-var AppModule = (function () {
-    function AppModule() {
+var GameComponent = (function () {
+    function GameComponent() {
     }
-    return AppModule;
+    return GameComponent;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, game_component_1.GameComponent],
-        bootstrap: [app_component_1.AppComponent]
+GameComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'game',
+        templateUrl: 'game.component.html',
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], GameComponent);
+exports.GameComponent = GameComponent;
+//# sourceMappingURL=game.component.js.map
