@@ -10,21 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var game_service_1 = require("../../services/game.service");
-var GameComponent = (function () {
-    function GameComponent(gameService) {
-        this.gameService = gameService;
-        this.gameService.getGame_Q_A().subscribe(function (game_q_a) { console.log(game_q_a); });
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
+var GameService = (function () {
+    function GameService(http) {
+        this.http = http;
+        console.log('Game Service Initialized...');
     }
-    return GameComponent;
+    GameService.prototype.getGame_Q_A = function () {
+        return this.http.get('http://localhost:8888/api/game').map(function (res) { return res.json(); });
+    };
+    return GameService;
 }());
-GameComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'game',
-        templateUrl: 'game.component.html',
-    }),
-    __metadata("design:paramtypes", [game_service_1.GameService])
-], GameComponent);
-exports.GameComponent = GameComponent;
-//# sourceMappingURL=game.component.js.map
+GameService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], GameService);
+exports.GameService = GameService;
+//# sourceMappingURL=game.service.js.map
