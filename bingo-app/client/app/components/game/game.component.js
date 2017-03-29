@@ -13,9 +13,16 @@ var core_1 = require("@angular/core");
 var game_service_1 = require("../../services/game.service");
 var GameComponent = (function () {
     function GameComponent(gameService) {
+        var _this = this;
         this.gameService = gameService;
-        this.gameService.getGame_Q_A().subscribe(function (game_q_a) { console.log(game_q_a); });
+        this.gameService.getGame_Q_A()
+            .subscribe(function (game_q_a) {
+            _this.game_q_a = game_q_a;
+        });
     }
+    GameComponent.prototype.clickQ = function (item) {
+        console.log(item);
+    };
     return GameComponent;
 }());
 GameComponent = __decorate([
