@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var game_service_1 = require("../../services/game.service");
+var io = require("socket.io-client");
 var GameComponent = (function () {
     function GameComponent(gameService) {
         var _this = this;
@@ -20,6 +21,10 @@ var GameComponent = (function () {
             _this.game_q_a = game_q_a;
         });
         this.notClicked = false;
+        this.socket = io.connect('http://localhost:8888');
+        this.socket.on('connect', function () {
+            console.log("sockets from angular");
+        });
     }
     GameComponent.prototype.clickQ = function (item) {
         console.log(item);

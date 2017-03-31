@@ -24,9 +24,13 @@
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
+      'socket.io-client': 'node_modules/socket.io-client/dist/socket.io.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
+      "socket.io-client": {
+        "defaultExtension": "js"
+      },
       app: {
         main: './main.js',
         defaultExtension: 'js'
