@@ -1,6 +1,9 @@
 <div class="row text-center">
-  <div *ngFor="let q_a of game_q_a">
-    <button type="button" class="col-md-4 btn btn-info" (click)="clickQ(q_a.question)">
+  <div *ngFor="let q_a of game_q_a; let i=index; ">
+    <button type="button" class="col-md-4 btn btn-info" (click)="clickNum()" *ngIf="!notClicked">
+        <h1>{{i+1}}</h1>
+    </button>
+    <button type="button" class="col-md-4 btn btn-info" (click)="clickQ(q_a.question)" *ngIf="notClicked">
         <p>
           {{q_a.question}}
         </p>

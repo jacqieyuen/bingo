@@ -19,9 +19,14 @@ var GameComponent = (function () {
             .subscribe(function (game_q_a) {
             _this.game_q_a = game_q_a;
         });
+        this.notClicked = false;
     }
     GameComponent.prototype.clickQ = function (item) {
         console.log(item);
+        this.notClicked = false;
+    };
+    GameComponent.prototype.clickNum = function () {
+        this.notClicked = true;
     };
     return GameComponent;
 }());
