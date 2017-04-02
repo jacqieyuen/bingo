@@ -11,9 +11,21 @@
   height: 100px;
   border: 1px solid black;
 }
+#mc-board-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+
+}
 .mc-board-row{
+  width: 100vw;
+  /*height: 100vh;*/
   display: flex;
   justify-content: space-between;
+
 }
 .bingo-questions{
   border: 1px solid black;
