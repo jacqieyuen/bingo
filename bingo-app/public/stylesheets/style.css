@@ -1,8 +1,16 @@
 #bingo-board-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+#outter-row {
 
 }
 .bingo-board-row {
-  position: relative;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
@@ -27,6 +35,12 @@
   justify-content: space-between;
 
 }
-.bingo-questions{
+.btn.btn-group.bingo-questions{
+  width: 80px;
+  height: 80px
   border: 1px solid black;
+  border-radius: 100px;
+}
+.btn.btn-group.bingo-questions:hover{
+  background-color: yellow;
 }
