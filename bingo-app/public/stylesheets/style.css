@@ -1,0 +1,20 @@
+#bingo-board-container{
+
+}
+.bingo-board-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.bingo-board-square{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.mc-board-row{
+  display: flex;
+  justify-content: space-between;
+}
+.bingo-questions{
+  border: 1px solid black;
+}

@@ -1,15 +1,15 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-import {AppComponent} from './app.component';
-import {GameComponent} from './components/game/game.component';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { HttpModule }     from '@angular/http';
+import {AppComponent}     from './app.component';
+import {GameComponent}    from './components/game/game.component';
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, HttpModule],
-  declarations: [AppComponent, GameComponent],
-  bootstrap: [AppComponent]
+  imports       : [ BrowserModule, HttpModule],
+  declarations  : [AppComponent, GameComponent],
+  bootstrap     : [AppComponent]
 })
 
 export class AppModule { }
